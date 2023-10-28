@@ -1,0 +1,53 @@
+<!-- lname,fname,emailid,pno,address, -->
+<div>
+    <legend>Enter User Data</legend>
+    <form #userData1="ngForm" >
+        <label>First Name:</label><input type="text" name="fname" ngModel><br>
+        <label>Last Name:</label><input type="text" name="lname" ngModel><br>
+        <label>Email:</label><input type="text" name="emailid" ngModel><br>
+        <label>Phone Number:</label><input type="text" name="pno" ngModel><br>
+        <label>Address:</label><input type="text" name="address" ngModel><br>
+        <input class="button" type="reset" value="Reset"><br>
+        <input class="button" type="button" value="API Get All" (click)="getAllContacts()"><br>
+        <input class="button" type="button" value="API Add User" (click)="addContacts(userData1)"><br>
+        <input  class="button" type="button" value="API Get User By ID" (click)="getContactByfname(userData1)"><br>
+        <input  class="button" type="button" value="API Delete User" (click)="deleteContacts(userData1)"><br>
+        <input  class="button" type="button" value="API Update User" (click)="updateContacts(userData1)"><br>
+        
+        <table name="table1" *ngIf="contactsArray.length > 0" >
+          <caption style="font-weight: bolder;">Contact Info</caption>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone Number</th>
+              <th>Phone Number</th>
+              <th>Address</th>
+            </tr>
+            <tr *ngFor="let user of contactsArray">
+              <td>{{user.firstName}}</td>
+              <td>{{user.lastName}}</td>
+              <td>{{user.mobileNumber}}</td>
+              
+              <td>{{user.Address}}</td>
+              <td>{{user.email}}</td>
+            </tr>
+          </table>
+
+          <br>
+          <table>
+
+            <caption>Fetched Contact Info</caption>
+            <tr><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Address</th><th>Email</th></tr>
+            <tr *ngFor="let g of getContactarray">
+              <td>{{g.firstName}}</td>
+              <td>{{g.lastName}}</td>
+              <td>{{g.mobileNumber}}</td>
+              <td>{{g.Address}}</td>
+              <td>{{g.email}}</td>
+            </tr>
+
+          </table>
+        
+
+    </form>
+  </div>

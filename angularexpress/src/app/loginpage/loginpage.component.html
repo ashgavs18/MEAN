@@ -1,0 +1,9 @@
+<div>
+    <form #loginForm="ngForm">
+        <label i18n >UserName:</label><input type="text" name="uid" ngModel><br>
+        <label i18n >Password:</label><input type="text" name="password" ngModel><br>
+        
+       
+        <button i18n class="button"  (click)="login(loginForm)">Login</button><br>
+    </form>
+</div>

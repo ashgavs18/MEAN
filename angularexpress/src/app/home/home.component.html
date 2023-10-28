@@ -1,0 +1,44 @@
+<div>
+    <!-- Any Template driven form must use NgForm attributr directive. the corresponding model is automatically created by Angular -->
+    
+      <h1>Enter User Data</h1>
+      <form #userData="ngForm" >
+        <label>User ID</label><input type="text" name="uid" ngModel><br>
+        <label>Password:</label><input type="text" name="password" ngModel><br>
+        <label>Email:</label><input type="text" name="email" ngModel><br>
+        <input class="button" type="reset" value="Reset"><br>
+        <input class="button" type="button" value="API Get All" (click)="getAllUser()"><br>
+        <input class="button" type="button" value="API Add User" (click)="addUser(userData)"><br>
+        <input  class="button" type="button" value="API Get User By ID" (click)="getUserByID(userData.value.uid)"><br>
+        <input  class="button" type="button" value="API Delete User" (click)="deleteUser(userData.value.uid)"><br>
+        <input  class="button" type="button" value="API Update User" (click)="updateUser(userData)"><br>
+        
+        </form>
+        <table *ngIf="detailsArray.length > 0">
+          <caption style="font-weight: bolder;">User Info</caption>
+          <tr>
+            <th>User ID</th>
+            <th>Password</th>
+            <th>Email</th>
+          </tr>
+          <tr *ngFor="let user of detailsArray">
+            <td>{{user.UserID}}</td>
+            <td>{{user.Password}}</td>
+            <td>{{user.Email}}</td>
+          </tr>
+        </table>
+    <br>
+    <br>
+    <fieldset>
+    <table >
+      <caption>Fetched User Info</caption>
+      <tr><th>User ID</th><th>Password</th><th>Email</th></tr>
+      <tr *ngFor="let g of getuserarray">
+        <td>{{g.UserID}}</td>
+        <td>{{g.Password}}</td>
+        <td>{{g.Email}}</td>
+      </tr>
+    </table>
+  </fieldset>
+    </div>
+    

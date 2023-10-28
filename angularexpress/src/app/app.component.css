@@ -1,0 +1,32 @@
+.log {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 1398px ;
+  }
+  
+  .log:hover {
+    background-color: #cc0000;
+
+
+  }
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: #ff0000 1px solid;
+  }
+  
+.nav-link:hover {
+  background-color:  #cc0000;
+
+
+}
