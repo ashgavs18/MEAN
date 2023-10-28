@@ -1,0 +1,260 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+link::after
+{
+color: black;
+
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  text-align: center;
+
+}
+
+.navigation-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.navigation-list li {
+  margin: 0 10px;
+ 
+}
+
+
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  font-size: 25px;
+  width: 8em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.5s;
+  margin: 0.8em;
+  
+}
+h1{
+  color: blue;
+}
+fieldset
+{
+  border: solid 2px blue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f2f2f2;
+}
+table
+{
+  border: solid 2px blue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+tr
+{
+  border: solid 2px blue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f2f2f2;
+}
+td
+{
+  border: solid 2px blue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f2f2f2;
+}
+.class
+{
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 85%;
+}
+.class:hover
+{
+  background-color: red;
+  color: white;
+  border: none;
+  
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+li::before,
+li::after {
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: gainsboro;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
+}
+
+li::before {left: 0; z-index: -1;}
+li::after {right: 0; z-index: -2;}
+
+li:hover {
+  color: white;
+  animation: fadeIn 3s infinite ease-in-out;
+}
+
+li:hover::before,
+li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: dodgerblue;
+}
+
+li:hover::before {
+  top: 0;
+}
+
+li:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
+  
+}
+h3
+{
+  
+  font-weight: bolder; ;
+  padding-left: 80%;
+  animation: ani2 3s alternate-reverse infinite ease-in-out;
+}
+@keyframes ani2 {
+  0% {
+    color: aqua;
+    
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    
+  }
+}
+:root {
+  font-size: 20px;
+  box-sizing: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+body {
+  font: 1em/1.618 Inter, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  min-height: 90vh;
+  padding: 30px;
+  
+  color: #224;
+  background:
+    url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+    center / cover no-repeat fixed;
+}
+
+.card {
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 100%;
+  height: 100%;
+  padding: 35px;
+  box-sizing: border-box;
+  
+
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+
+  backdrop-filter: blur(15px);
+  
+}
+
+.card-footer {
+  font-size: 0.65em;
+  color: #446;
+}
